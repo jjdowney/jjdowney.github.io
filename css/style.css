@@ -1,11 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+@import url('/css/normalize.css');
 
+html{
+    box-sizing: border-box;
+}
 
-header, footer{
+*, *:before, *:after{
+    box-sizing: border-box;
+}
+
+header, footer {
     background-color: rgb(183, 218, 241);
     padding: .5em;
     
 }
 
+/* List Component */
 ul {
     padding: 1em;
     margin-left: 100px;
