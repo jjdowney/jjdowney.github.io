@@ -21,6 +21,7 @@ nav {
 main {
     display: grid;
     grid-template-columns: 1fr;
+    max-width: 760px;
 }
 
 header {
