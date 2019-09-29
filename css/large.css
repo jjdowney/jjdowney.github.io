@@ -1,0 +1,10 @@
+@media only screen and (min-width: 60rem) {
+
+    main {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    img {
+        float: right;
+    }
+}
