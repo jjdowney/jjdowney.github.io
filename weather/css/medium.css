@@ -1,0 +1,12 @@
+@media only screen and (min-width: 32.51em) {
+
+   main {
+       grid-template-columns: 1fr 1fr;
+   }
+
+   #navigation {
+        font-size: 1.5em;
+        padding: 1.5em;
+   }
+
+}

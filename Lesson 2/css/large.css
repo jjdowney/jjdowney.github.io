@@ -5,8 +5,14 @@
         
     }
 
+    section img {
+        max-width: 400px;
+    }
+    /* img {
+        float: right;
+    }
 
-    /* main section:nth-child(3) {
+    main section:nth-child(3) {
         grid-column: span 1
     } */
 }

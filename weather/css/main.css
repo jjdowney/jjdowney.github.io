@@ -1,0 +1,109 @@
+@import url('/css/normalize.css');
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|BenchNine|Darker+Grotesque|Marvel|Poiret+One&display=swap');
+
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 1em;
+}
+
+header {
+    display: flex;
+    justify-content: left;
+    background-color: #8acfe0;
+}
+
+h1, h2 {
+    margin-left: 25px;
+    font-family: 'BenchNine', sans-serif;
+    font-size: 2em;
+    color: #001e4b;
+
+}
+
+h3, h4, h5, h6 {
+    margin-left: 25px;
+    font-family: 'BenchNine', sans-serif;
+    font-size: 2em;
+    color: #001e4b;
+    text-align: left;
+    
+}
+
+#navigation {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    background-color: #9feb93;
+    padding: 2em;
+    font-size: 1em;
+    font-weight: bold;
+    font-family: 'Darker Grotesque', sans-serif;
+}
+
+.list {
+    list-style-type: normal;
+    font-family: 'Marvel', sans-serif;
+    font-size: 1.25em;
+    color: rgb(0, 30, 75);
+
+}
+
+.scenario {
+    list-style-type: none;
+    font-family: 'Marvel', sans-serif;
+    font-size: 1.25em;
+    color: rgb(0, 30, 75);
+    padding: .5em;
+}
+
+nav li {
+    list-style-type: none;
+    display: inline-block;
+}
+
+nav a {
+    color: rgb(0, 30, 75);
+    text-decoration: none;
+}
+
+
+#logo {
+    width: 100px;
+    margin-left: 30px;
+    
+}
+
+img {
+    padding: .5em;
+    width: 150px;
+
+}
+
+p {
+    margin: 25px;
+    font-family: 'Marvel', sans-serif;
+    font-size: 1.25em;
+    color: rgb(0, 30, 75);
+    justify-content: center;
+}
+
+footer {
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(138, 207, 224);
+    padding: 1em;
+    font-size: 1em;
+    font-family: 'Marvel', sans-serif;
+    color: rgb(0, 30, 75);
+    position: bottom;
+}
