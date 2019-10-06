@@ -105,5 +105,5 @@ footer {
     font-size: 1em;
     font-family: 'Marvel', sans-serif;
     color: rgb(0, 30, 75);
-    position: bottom;
+    clear: both;
 }
