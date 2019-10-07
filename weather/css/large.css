@@ -9,11 +9,11 @@
     }
 
     #navigation {
-        font-size: 2em;
-        padding: 1em;
+        font-size: 1.5em;
+        padding: .5em;
    }
 
    footer {
-       font-size: 1.5em;
+       font-size: 1.35em;
    }
 }

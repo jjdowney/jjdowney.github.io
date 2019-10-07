@@ -5,8 +5,13 @@
    }
 
    #navigation {
-        font-size: 1.5em;
-        padding: 1.5em;
+        font-size: 1.25em;
+        padding: 1.2em;
+        flex-direction: row;
+   }
+
+   footer {
+       font-size: 1.25em;
    }
 
 }
