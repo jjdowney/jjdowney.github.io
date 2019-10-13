@@ -1,0 +1,36 @@
+@media only screen and (min-width: 35em) {
+
+    main {
+        grid-template-columns: 1fr 1fr;
+    }
+ 
+    footer {
+        font-size: 1.25em;
+    }
+ 
+    nav ul li a {
+        border-top: none;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        text-align: center;
+    }
+
+    nav ul.hide {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        text-align: center;
+    }
+
+    nav button {
+        display: none;
+    }
+
+
+
+}

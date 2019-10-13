@@ -1,0 +1,108 @@
+@import url('/css/normalize.css');
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|BenchNine|Darker+Grotesque|Marvel|Poiret+One&display=swap');
+
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    background-color: #8acfe0;
+}
+
+.tagline {
+    font-family: 'BenchNine', sans-serif;
+    color: #001e4b;
+    font-size: 1.5em;
+    margin-top: 0px;
+    padding: 0em;
+}
+
+#logo {
+    width: 100px;
+    padding: 1em;
+}
+
+p {
+    color: #001e4b;
+    font-family: 'Marvel', sans-serif;
+    margin-left: 20px;
+    text-align: center;
+    padding: .5em;
+}
+
+nav button {
+    margin: .2rem 2%;
+    font-size: 1.6rem;
+}
+
+nav {
+    background-color: #9feb93;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0.5em;
+    margin: 0;
+    padding: 0.25em;
+    font-size: 1em;
+    font-weight: bold;
+    font-family: 'Darker Grotesque', sans-serif;
+}
+
+nav ul li {
+    display: flex;
+    flex-direction: column;
+}
+
+nav ul li a {
+    padding: .8rem 2%;
+    text-decoration: none;
+    color: #001e4b;
+    border-top: 1px solid #001e4b;
+}
+
+nav ul.hide {
+    display: none;
+}
+
+
+h1 {
+    color: #001e4b;
+    font-family: 'BenchNine', sans-serif;
+    margin-left: none;
+    font-size: 2em;
+    padding: 0em;
+}
+
+h2, h3, h4, h5, h6 {
+    color: #001e4b;
+    font-family: 'BenchNine', sans-serif;
+    margin-left: 20px;
+    text-align: center;
+    padding: 0.25em;
+    font-size: 1.75em;
+}
+
+footer {
+    background-color: #8acfe0;
+    color: #001e4b;
+    font-size: 1em;
+    font-family: 'Marvel', sans-serif;
+    text-align: center;
+    padding: 1.5em;
+
+
+}
