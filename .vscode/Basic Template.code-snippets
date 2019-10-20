@@ -1,0 +1,57 @@
+{
+	// Place your jjdowney.github.io workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"scope": "javascript,typescript",
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	"Create a Basic Web Page": {
+		"scope": "html",
+		"prefix": "!html",
+		"body": [
+"<!DOCTYPE html>"
+"<html lang="en">"
+"<head>"
+"	<meta name="viewpoint" content="width=device-width, initial-scale=1">"
+"   <meta name="description" content="Preston Home Page for Jaime Hudson in CIT 230: Web Frontend Development">"
+"   <meta name="author" content="Jaime Hudson">"
+"   <script src="/weather/locations/js/footer.js" async></script>"
+"   <link rel="stylesheet" href="/weather/locations/css/main.css">"
+"   <link rel="stylesheet" href="/weather/locations/css/medium.css" media= "screen and (min-width:35rem)">"
+"   <link rel="stylesheet" href="/weather/locations/css/large.css" media= "screen and (min-width: 60em)">"
+""
+"    <title>Document</title>"
+"</head>"
+""
+"<body>"
+"    <header>"
+""
+"    </header>"
+""
+"    <nav>"
+""
+"    </nav>"
+""
+"    <main>"
+"        <h1>Put the content heading here.</h1>"
+"    </main>"
+""
+"    <footer>"
+""
+"    </footer>"
+"</body>"
+"</html>"
+		],
+		"description": "Create a basic web page"
+	}
+}

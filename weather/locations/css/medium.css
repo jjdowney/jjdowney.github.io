@@ -1,7 +1,7 @@
 @media only screen and (min-width: 35em) {
 
     main {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
     }
  
     footer {
@@ -29,6 +29,14 @@
 
     nav button {
         display: none;
+    }
+
+    .location {
+        grid-column: span 3;
+    }
+
+    .current {
+        grid-column: span 3;
     }
 
 
