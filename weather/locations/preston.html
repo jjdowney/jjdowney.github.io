@@ -7,7 +7,7 @@
     <meta name="author" content="Jaime Hudson">
     <script src="/weather/locations/js/footer.js" async></script>
     <link rel="stylesheet" href="/weather/locations/css/main.css">
-    <link rel="stylesheet" href="/weather/locations/css/medium.css" media= "screen and (min-width:35rem)">
+    <link rel="stylesheet" href="/weather/locations/css/medium.css" media= "screen and (min-width:45rem)">
     <link rel="stylesheet" href="/weather/locations/css/large.css" media= "screen and (min-width: 60em)">
 
     
@@ -38,51 +38,57 @@
     <main>
         <section class="location">
             <h2>PRESTON, IDAHO</h2>
-            <p><strong>GPS:</strong></p>
+            <p><strong>GPS:</strong> 42° 05' 25.80" N, -111° 52' 18.59" W</p>
         </section>
 
         <section class="current">
             <h2>Current Conditions</h2>
-            <h3>60&deg;F</h3>
-            <h4 id="high">80&deg;<span style="color: blue">45&deg;</span></h4>
+            <ul id="todayTemp">
+                <li id="high">80&deg;</li>
+                <li><h3>60&deg;F</h3></li>
+                <li id="low">45&deg;</li>
+            </ul><br>
         </section>
 
-        <section class="temperature">
-            <h2>Temperatures</h2>
-                <!-- <div class="numbers">
-                    <div class="circle"></div>
-                    <div class="center">&nbsp;&deg;F</div>
-                    <div class= "o1">85</div>
-                    <div class= "o2">82</div>
-                    <div class= "o3">83</div>
-                    <div class= "o4">84</div>
-                    <div class= "o5">85</div>
-                    <div class= "o6">86</div>
-                    <div class= "o7">87</div>
-                    <div class= "o8">88</div>
-                    <div class= "o9">89</div>
-                    <div class= "o10">90</div>
-                    <div class= "o11">81</div>
-                    <div class= "o12">82</div>
-                    <div class= "i1">71</div>
-                    <div class= "i2">72</div>
-                    <div class= "i3">73</div>
-                    <div class= "i4">74</div>
-                    <div class= "i5">75</div>
-                    <div class= "i6">76</div>
-                    <div class= "i7">77</div>
-                    <div class= "i8">78</div>
-                    <div class= "i9">79</div>
-                    <div class= "i10">71</div>
-                    <div class= "i11">71</div>
-                    <div class= "i12">72</div>
-                    <div class="ball"></div> -->
+        <section class= "temperature">
+            <h2>Temperature</h2>
+                <div class="wrapper">
+                <div class="circle">
+                <div class="center">&nbsp;&deg;F</div>
+                <div class= "o1">85&deg;</div>
+                <div class= "o2">82&deg;</div>
+                <div class= "o3">83&deg;</div>
+                <div class= "o4">84&deg;</div>
+                <div class= "o5">85&deg;</div>
+                <div class= "o6">86&deg;</div>
+                <div class= "o7">87&deg;</div>
+                <div class= "o8">88&deg;</div>
+                <div class= "o9">89&deg;</div>
+                <div class= "o10">90&deg;</div>
+                <div class= "o11">81&deg;</div>
+                <div class= "o12">82&deg;</div>
+                <div class= "i1">1</div>
+                <div class= "i2">2</div>
+                <div class= "i3">3</div>
+                <div class= "i4">4</div>
+                <div class= "i5">5</div>
+                <div class= "i6">6</div>
+                <div class= "i7">7</div>
+                <div class= "i8">8</div>
+                <div class= "i9">9</div>
+                <div class= "i10">10</div>
+                <div class= "i11">11</div>
+                <div class= "i12">12</div>
+                <div class="ball"></div>
+                </div>
+                </div>
+                </section>
         </section>
 
-        <section class="precipiation">
+        <section class="precipitation">
             <h2>Precipitation</h2>
-                <!-- <div class= "numbers"></div>
-                    <div class="circle"></div>
+                <div class= "wrapper">
+                    <div class="circle">
                     <div class="center">&#9730%</div>
                     <div class= "o1">85</div>
                     <div class= "o2">82</div>
@@ -96,26 +102,28 @@
                     <div class= "o10">90</div>
                     <div class= "o11">81</div>
                     <div class= "o12">82</div>
-                    <div class= "i1">71</div>
-                    <div class= "i2">72</div>
-                    <div class= "i3">73</div>
-                    <div class= "i4">74</div>
-                    <div class= "i5">75</div>
-                    <div class= "i6">76</div>
-                    <div class= "i7">77</div>
-                    <div class= "i8">78</div>
-                    <div class= "i9">79</div>
-                    <div class= "i10">71</div>
-                    <div class= "i11">71</div>
-                    <div class= "i12">72</div>
+                    <div class= "i1">1</div>
+                    <div class= "i2">2</div>
+                    <div class= "i3">3</div>
+                    <div class= "i4">4</div>
+                    <div class= "i5">5</div>
+                    <div class= "i6">6</div>
+                    <div class= "i7">7</div>
+                    <div class= "i8">8</div>
+                    <div class= "i9">9</div>
+                    <div class= "i10">10</div>
+                    <div class= "i11">11</div>
+                    <div class= "i12">12</div>
                     <div class="ball"></div>
-                    </section>     -->
+                    </div>
+                    </div>
+                    </section>    
         </section>
 
         <section class= "conditions">
             <h2>Conditions</h2>
-                <!-- <div class="circle"></div>
-                <section class="numbers"></section>
+                    <div class="wrapper">
+                    <div class="circle">
                     <div class="center"></div>
                     <div class= "o1">85</div>
                     <div class= "o2">82</div>
@@ -129,20 +137,22 @@
                     <div class= "o10">90</div>
                     <div class= "o11">81</div>
                     <div class= "o12">82</div>
-                    <div class= "i1">71</div>
-                    <div class= "i2">72</div>
-                    <div class= "i3">73</div>
-                    <div class= "i4">74</div>
-                    <div class= "i5">75</div>
-                    <div class= "i6">76</div>
-                    <div class= "i7">77</div>
-                    <div class= "i8">78</div>
-                    <div class= "i9">79</div>
-                    <div class= "i10">71</div>
-                    <div class= "i11">71</div>
-                    <div class= "i12">72</div>
+                    <div class= "i1">1</div>
+                    <div class= "i2">2</div>
+                    <div class= "i3">3</div>
+                    <div class= "i4">4</div>
+                    <div class= "i5">5</div>
+                    <div class= "i6">6</div>
+                    <div class= "i7">7</div>
+                    <div class= "i8">8</div>
+                    <div class= "i9">9</div>
+                    <div class= "i10">10</div>
+                    <div class= "i11">11</div>
+                    <div class= "i12">12</div>
                     <div class="ball"></div>
-                    </section> -->
+        </div>
+        </div>
+                    </section>
         </section>
      </main>
 
