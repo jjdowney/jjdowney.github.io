@@ -5,9 +5,14 @@
     }
     img {
         float: right;
+        margin-right: 10px;
     }
 
     main section:nth-child(3) {
         grid-column: span 2;
+    }
+
+    li {
+        font-size: 15px;
     }
 }
