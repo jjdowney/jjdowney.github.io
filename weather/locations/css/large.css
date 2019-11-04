@@ -3,6 +3,7 @@
 main {
     margin-left: 80px;
     margin-right: 80px;
+    align-items: center;
 }
 
 h1 {
@@ -24,12 +25,15 @@ nav ul li {
 
 footer {
    font-size: 1.35em;
-   margin-left: 150px;
-   margin-right: 150px;
+   width: 1350px;
+
 }
 
 header {
     grid-column: span 3;
 }
 
+#wrapper {
+    width: 1350px;
+}
 }

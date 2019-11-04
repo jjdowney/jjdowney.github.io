@@ -5,17 +5,18 @@
     <meta name="viewpoint" content="width=device-width, initial-scale=1">
     <meta name="description" content="Preston Home Page for Jaime Hudson in CIT 230: Web Frontend Development">
     <meta name="author" content="Jaime Hudson">
-    <script src="/weather/locations/js/footer.js" async></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css">
     <link rel="stylesheet" href="/weather/locations/css/main.css">
     <link rel="stylesheet" href="/weather/locations/css/medium.css" media= "screen and (min-width:45rem)">
     <link rel="stylesheet" href="/weather/locations/css/large.css" media= "screen and (min-width: 60em)">
-
-    
+    <link rel='icon' href="/weather/images/icon.jpg" type='image/x-icon'/>
 
     <title>Preston | mybetterweather.com</title>
 </head>
 
 <body>
+    <div id="wrapper">
+
     <header>
         <img id="logo" src="/weather/images/icon.jpg" alt="Logo with a sun behind a cloud">
         <section class="headings"><h1>Better Weather</h1>
@@ -36,20 +37,25 @@
     </nav>
 
     <main>
+        
         <section class="location">
             <h2>PRESTON, IDAHO</h2>
             <p><strong>GPS:</strong> 42° 05' 25.80" N, -111° 52' 18.59" W</p>
         </section>
-
+        <div id="compContainer">
         <section class="current">
             <h2>Current Conditions</h2>
-            <ul id="todayTemp">
-                <li id="high">80&deg;</li>
-                <li><h3>60&deg;F</h3></li>
-                <li id="low">45&deg;</li>
-            </ul><br>
+            <div><ul id="todayTemp">
+            <li id="temp">60&deg;F</li>
+            <li id="feelTemp"></li>
+            <li id="high">80&deg;</li>
+            <li id="low">45&deg;</li>
+            <li id="windSpeed"><span class="wi wi-strong-wind"></span> 5mph</li>
+            <li id="gusts">Gusts: 10mph</>
+            </ul>
+            </div>
         </section>
-
+        
         <section class= "temperature">
             <h2>Temperature</h2>
                 <div class="wrapper">
@@ -67,7 +73,7 @@
                 <div class= "o10">90&deg;</div>
                 <div class= "o11">81&deg;</div>
                 <div class= "o12">82&deg;</div>
-                <div class= "i1">1</div>
+                <div class= "i1 ball">1</div>
                 <div class= "i2">2</div>
                 <div class= "i3">3</div>
                 <div class= "i4">4</div>
@@ -79,12 +85,10 @@
                 <div class= "i10">10</div>
                 <div class= "i11">11</div>
                 <div class= "i12">12</div>
-                <div class="ball"></div>
                 </div>
                 </div>
         </section>
     
-
         <section class="precipitation">
             <h2>Precipitation</h2>
                 <div class= "wrapper">
@@ -114,7 +118,6 @@
                     <div class= "i10">10</div>
                     <div class= "i11">11</div>
                     <div class= "i12">12</div>
-                    <div class="ball"></div>
                     </div>
                     </div>
                  
@@ -149,15 +152,17 @@
                     <div class= "i10">10</div>
                     <div class= "i11">11</div>
                     <div class= "i12">12</div>
-                    <div class="ball"></div>
                     </div>
                     </div>
                     </section>
-    
+                </section>
      </main>
-
+    </div>
     <footer>
         Email: betterweather@gmail.com | Phone: 208-888-4444 | <br> &copy;<span id="copyYear"></span>BetterWeather | Jaime Hudson | <a href="#"> Terms of Use</a> |<br>Today: <span id="today"></span>
     </footer>
+    </div>
+
+    <script src="/weather/js/functions.js"></script>
 </body>
 </html>

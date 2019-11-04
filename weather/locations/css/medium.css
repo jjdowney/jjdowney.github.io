@@ -1,11 +1,21 @@
 @media only screen and (min-width: 45em) {
 
     main {
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
     }
- 
+    
+    #compContainer {
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 70px 0px;        
+    }
+    #wrapper {
+        width: 1000px;
+    }
+
     footer {
         font-size: 1.25em;
+        width: 1000px;
+        
     }
  
     nav ul li a {
@@ -39,6 +49,5 @@
         grid-column: span 3;
     }
 
-
-
+    
 }
