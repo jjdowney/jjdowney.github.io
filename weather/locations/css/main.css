@@ -82,6 +82,9 @@ nav ul.hide {
     display: none;
 }
 
+.hide {
+    display: none;
+}
 
 h1 {
     color: #001e4b;
@@ -106,8 +109,19 @@ h2, h3, h4, h5, h6 {
     background-image: var(--dynamic-weather-background);
 }
 
+#contentHeading {
+    text-align: center;
+}
+
+/* Constrain condition images */
+.conditions img {
+    max-width: 40%;
+}
+
 .current {
     border: #001e4b solid;
+    background-color: rgb(159, 235, 147, 0.4);
+    ;
 }
 
 #todayTemp {
@@ -154,20 +168,22 @@ footer {
     border: #001e4b solid;
     padding:.5em;
     margin: 10px 10px 10px 10px;
+    background-color: rgb(159, 235, 147, 0.4);
 }
 
-.precipitation {
+.wind {
     display: block;
     border: #001e4b solid;
     margin: 10px 10px 10px 10px;
+    background-color: rgb(159, 235, 147, 0.4);
 }
 
 .conditions {
     display: block;
     border: #001e4b solid;
     margin: 10px 10px 10px 10px;
+    background-color: rgb(159, 235, 147, 0.4);
 }
-
 
 
 .circle {
