@@ -114,14 +114,21 @@ h2, h3, h4, h5, h6 {
 }
 
 /* Constrain condition images */
-.conditions img {
-    max-width: 40%;
+img.min {
+    width: 20px;
+}
+
+.wind .wrapper .center {
+    font-size: 25px;
+    position: absolute;
+    top: 70px;
+    left: 63px;
 }
 
 .current {
     border: #001e4b solid;
     background-color: rgb(159, 235, 147, 0.4);
-    ;
+    
 }
 
 #todayTemp {

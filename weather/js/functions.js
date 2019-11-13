@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 var pageNav = document.querySelector('#page-nav');
 var statusContainer = document.querySelector('#status');
 var contentContainer = document.querySelector('#main-content');
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function(){
     // console.log(outside);
     // changeSummaryBackground(outside);
     // Get weather json data
-    let weatherURL = "../js/idahoweather.json/idahoweather.json";
+    let weatherURL = "../js/idahoweather.json";
     fetchWeatherData(weatherURL);
 })
 
@@ -76,8 +76,9 @@ wc = (wc > temp)?temp:wc;
 
 // Display the windchill
 console.log(wc);
-wc = 'Feels Like: ' + wc + '&deg;F';
-feelTemp.innerHTML = wc;
+// wc = 'Feels Like: ' + wc + '&deg;F';
+// feelTemp.innerHTML = wc;
+return wc;
 }
 
 // Time Indicator Function 
@@ -85,25 +86,25 @@ function timeBall(hour){
     //Find all "ball" classes and remove them
     let x = document.querySelectorAll(".ball");
     for (let item of x) {
-        console.log(item);
-        item.classList.remove("ball");
+        console.log(`Ball location is: ${hour}`);
+        // item.classList.remove("ball");
     }
 
     // Find all hours that match the parameter and add the "ball" class
     let hr = document.querySelectorAll(".i"+hour);
     for (let item of hr){
-        item.classList.add("ball");
+        item.classList.toggle("ball");
     }
 }
 
     // Function to change background image
-    function changeSummaryBackground(outside) {
+    function changeSummaryBackground(keyword) {
         let x = document.getElementById('compContainer');
-        console.log(`Outside is: ${outside}`);
+        console.log(`Outside is: ${keyword}`);
 
     // Case Statements to change background image into current condition
-    console.log(outside);
-    switch (outside) {
+    console.log(keyword);
+    switch (keyword) {
         case "clear":
             x.className += 'clear';
             break;
@@ -125,37 +126,38 @@ function timeBall(hour){
     }
     console.log(`The used name is: ${x.className}`);
 
+
     // Pull correct image
     let width = window.innerWidth;
     console.log(`Width of screen: ${width}`);
-    if ((width >= (720)) && (outside == 'clear')) {
+    if ((width >= (720)) && (keyword == 'clear')) {
         var imgLoad = "url(/images/clear-large.jpg)";
     }
-    else if ((width >= (720)) && (outside == 'rain')) {
+    else if ((width >= (720)) && (keyword == 'rain')) {
         var imgLoad = "url(/images/rain-large.jpg)";
     }
-    else if (width >= (720) && outside == 'fog') {
+    else if (width >= (720) && keyword == 'fog') {
         var imgLoad = "url(/images/fog-large.jpg)";
     }
-    else if (width >= (720) && outside == 'snow') {
+    else if (width >= (720) && keyword == 'snow') {
         var imgLoad = "url(/images/snow-large.jpg)";
     }
-    else if (width >= (720) && outside == 'cloudy') {
+    else if (width >= (720) && keyword == 'cloudy') {
         var imgLoad = "url(/images/clouds-large.jpg)";
     }
-    else if (width < (720) && outside == 'clear') {
+    else if (width < (720) && keyword == 'clear') {
         var imgLoad = "url(/images/clear-small.jpg)";
     }
-    else if (width < (720) && outside == 'fog') {
+    else if (width < (720) && keyword == 'fog') {
         var imgLoad = "url(/images/fog-small.jpg)";
     }
-    else if (width < (720) && outside == 'rain') {
+    else if (width < (720) && keyword == 'rain') {
         var imgLoad = "url(/images/rain-small.jpg)";
     }
-    else if (width < (720) && outside == 'snow') {
+    else if (width < (720) && keyword == 'snow') {
         var imgLoad = "url(/images/snow-small.jpg)";
     }
-    else if (width < (720) && outside == 'cloudy') {
+    else if (width < (720) && keyword == 'cloudy') {
         var imgLoad = "url(/images/clouds-small.jpg)";
     }
     else {
@@ -247,7 +249,7 @@ function timeBall(hour){
         console.log(`nowHour is: ${nowHour}`);
         for (let i = 0, x = 11; i <= x; i++)
             if (nowHour < 24) {
-                hourData[nowHour] = data.properties.periods[i].temperature + data.properties.periods[i].windSpeed + "," + data.properties.periods[i].icon;
+                hourData[nowHour] = data.properties.periods[i].temperature + "," + data.properties.periods[i].windSpeed + "," + data.properties.periods[i].icon;
                 sessStore.setItem(`hour${nowHour}`, hourData[nowHour]);
                 nowHour++;
             }
@@ -292,7 +294,9 @@ function timeBall(hour){
     // The latitude and longitude should match what was stored in session storage
 
     // Get the condition keyword and set Background picture
-    changeSummaryBackground(sessStore.getItem('shortForecast'));
+    var cast = sessStore.getItem('shortForecast');
+    var background = getKeyword(cast);
+    changeSummaryBackground(background);
 
     // ************ Set Current Conditions Info **************************
     // Set the temperature information
@@ -300,16 +304,16 @@ function timeBall(hour){
     let loTemp = document.querySelector('#low');
     let currentTemp = document.querySelector('#temp');
     let feelTemp = document.querySelector('#feelTemp');
-    highTemp.innerHTML = sessStore.getItem('highTemp') + "°F";
-    loTemp.innerHTML = sessStore.getItem('lowTemp') + "°F";
-    currentTemp.innerHTML = sessStore.getItem('temperature') + "°F";
+    highTemp.innerHTML = "High: " + sessStore.getItem('highTemp') + "°F";
+    loTemp.innerHTML = "Low: " + sessStore.getItem('lowTemp') + "°F";
+    currentTemp.innerHTML = sessStore.getItem('temp') + "°F";
     // Set wind information
     let speed = document.querySelector('#windSpeed');
     let gust = document.querySelector('#gusts');
-    speed.innerHTML = sessStore.getItem('windSpeed');
-    gust.innerHTML = sessStore.getItem('windGust');
+    speed.innerHTML = "Wind Speed: " + sessStore.getItem('windSpeed') + "mph";
+    gust.innerHTML = "Gusts: " + sessStore.getItem('windGust') + "mph";
     // Calculate feel like temp
-    feelTemp.innerHTML = buildWC(sessStore.getItem('windSpeed'), sessStore.getItem('temperature')) + "°F";
+    feelTemp.innerHTML = "Feels Like: " + buildWC(sessStore.getItem('windSpeed'), sessStore.getItem('temp')) + "°F";
 
     // ******** Set Time Indicators **************
     let thisDate = new Date();
@@ -333,12 +337,12 @@ function timeBall(hour){
     // Adjust counter based on current time
     for (let i = 0, x = 12; i < x; i++) {
         if (tempHour <= 23) {
-            currentData[i] = sessStore.getItem("hour" + tempHour).split(", ");
+            currentData[i] = sessStore.getItem("hour" + tempHour).split(",");
             tempHour++;
         }
         else {
             tempHour = tempHour - 12;
-            currentData[i] = sessStore.getItem("hour" + tempHour).split(", ");
+            currentData[i] = sessStore.getItem("hour" + tempHour).split(",");
             console.log(`CurrentData[i][0] is: ${currentData[i][0]}`);
             tempHour = 1;
         } 
@@ -352,10 +356,11 @@ function timeBall(hour){
         if (tempHour >= 13) {
             tempHour = tempHour - 12;
         }
-        console.log(`Start container is: #temp o.${tempHour}`);
         document.querySelector('.temperature .o' + tempHour).innerHTML = currentData[i][0];
         tempHour++;
     }
+    console.log(`Start container is: .temperature o.${tempHour}`);
+
 // *************** Hourly Wind Component *************************
 // Get hourly data from storage
 let windArray = [];
@@ -363,17 +368,16 @@ let windHour = currentHour;
 // Adjust counter based on current time
 for (let i = 0, x = 12; i < x; i++) {
     if (windHour <= 23) {
-        windArray[i] = currentData[i][1].split(", ");
-        console.log(`windArray[i] is: ${windArray}`);
+        windArray[i] = currentData[i][1].split(" ");
         windHour++;
     }
     else {
         windHour = windHour - 12;
-        windArray[i] = currentData[i][1].split(", ");
+        windArray[i] = currentData[i][1].split(" ");
         windHour = 1;
     }
 }
-console.log(windArray);
+console.log(`windArray[i] is: ${windArray}`);
 
 // Insert Wind data
 // Start with the outer container that matches the time indicator
@@ -388,15 +392,45 @@ for (let i = 0, x = 12; i < x; i++) {
 
 // ******************** Condition Component Icons ***************
 let conditionHour = currentHour;
-// Adjust counter based on current tiem
+// Adjust counter based on current time
 for (let i = 0, x = 12; i < x; i++) {
     if (conditionHour >= 13) {
         conditionHour = conditionHour - 12;
     }
-    document.querySelector('.conditions .o' + conditionHour).innerHTML = '<img src=\"' + currentData[i][2] + '\" alt="hourly weather condition image">';
-    conditionHour++;
-}  
+    document.querySelector('.conditions .o' + conditionHour).innerHTML = "<img class='min' src='" + currentData[i][2] + "' alt='Hourly weather condition'>";
+
+    conditionHour++; 
+
+}
+console.log(`Condition hour ${conditionHour}`);
+
 
 // Change the status of the containers
 contentContainer.setAttribute('class', ''); // removes the hide class from main
 statusContainer.setAttribute('class', 'hide'); // hides the status container
+
+
+//Change shortForecast to keyword
+function getKeyword(shortForecast) {
+    let forecast = shortForecast.toLowerCase();
+    var keyword;
+    if (forecast.includes("sunny") || forecast.includes("clear")){
+        keyword = "clear";
+    }
+    else if (forecast.includes("cloud") || forecast.includes("overcast")){
+        keyword = "cloudy";
+    }
+    else if (forecast.includes("snow") || forecast.includes("snow showers") || forecast.includes("sleet")){
+        keyword = "snow";
+    }
+    else if (forecast.includes("rain") || forecast.includes("thunder") || forecast.includes("showers")){
+        keyword = "rain";
+    }
+    else if (forecast.includes("fog")){
+        keyword = "fog";
+    }
+    else {
+        console.log("Forecast Error");
+    }
+    return keyword;
+}
