@@ -27,12 +27,12 @@ document.addEventListener("DOMContentLoaded", function(){
     fetchWeatherData(weatherURL);
 })
 
-
 // Button Function
 function toggleMenu() {
     console.log(document.getElementById("primary").classList);
     document.getElementById("primary").classList.toggle("hide");
 }
+
 
 // Copyright Year
 var year = new Date().getFullYear();
@@ -173,7 +173,7 @@ function timeBall(hour){
 
     // Fetch Weather Data
     function fetchWeatherData(weatherURL) {
-        let cityName = 'Preston'; // The data we want from the weather.json file
+        let cityName = 'Soda Springs'; // The data we want from the weather.json file
         fetch(weatherURL)
         .then(function(response) {
             if(response.ok){
@@ -184,9 +184,10 @@ function timeBall(hour){
         .then(function(data){
         // Check the data object that was retrieved
         console.log(data);
-        // data is the full JavaScript object, but we only want the preston part
+        // data is the full JavaScript object, but we only want the soda springs part
         // shorten the variable and focus only on the data we want to reduce typing
         let p = data[cityName];
+        console.log(p);
 
     //**********  Get the location information  **********
         let locName = p.properties.relativeLocation.properties.city;
@@ -201,8 +202,8 @@ function timeBall(hour){
         const latLong = p.properties.relativeLocation.geometry.coordinates[1] + ","+ p.properties.relativeLocation.geometry.coordinates[0];
         console.log(latLong);
         // Create a json object containing full name, latitude and longitude and store in local storage
-        const prestonData = JSON.stringify({fullName, latLong});
-        locStore.setItem("Preston,ID", prestonData);
+        const sodaSpringsData = JSON.stringify({fullName, latLong});
+        locStore.setItem("Soda Springs,ID", sodaSpringsData);
         
     //**********  Get the current conditions information  **********
         // As the data is extracted from the json, store it into session storage
@@ -280,13 +281,13 @@ function timeBall(hour){
         // inserts the fullName value before any other content that might exist
         pageTitle.insertBefore(fullNameNode, pageTitle.childNodes[0]);
         // When this is done the title should look like this:
-        // Preston, Idaho | mybetterweather.com
+        // Soda Springs, Idaho | mybetterweather.com
     }
 
     // Get the h1 to display the city location
     let contentHeading = document.querySelector('#contentHeading');
     contentHeading.innerHTML = sessStore.getItem('fullName');
-    // The h1 in the main element should now say "Preston, Idaho"
+    // The h1 in the main element should now say "Soda Springs, Idaho"
 
     // Get the coordinates container for the location
     let latLon = document.querySelector('#location');
