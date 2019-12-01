@@ -279,8 +279,8 @@ function getGeoLocation() {
 
     if(navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function (position) {
-            const lat = position.coords.latitude;
-            const long = position.coords.longitude;
+            const lat = Math.round(position.coords.latitude * 100) / 100;
+            const long = Math.round(position.coords.longitude * 100) / 100;
 
             //Combine the values
             const locale = lat + "," + long;
@@ -391,12 +391,12 @@ function getWeather(stationId) {
         session.setItem('temp', fTemp);
         // Wind Speed
         let mWindSpeed = data.properties.windSpeed.value;
-        let windSpeed = Math.round(mWindSpeed * 2.237);
+        let windSpeed = Math.round((mWindSpeed * 2.237) * 10) / 10;
         session.setItem("windSpeed", windSpeed);
         console.log(`Wind Speed is: ${windSpeed}`);
         // Wind Gusts
         let mWindGust = data.properties.windGust.value;
-        let windGust = Math.round(mWindGust * 2.237);
+        let windGust = Math.round((mWindGust * 2.237) * 10) / 10;
         session.setItem("windGust", windGust);
         console.log(`wind gusts are: ${windGust}`);
         
@@ -508,7 +508,7 @@ function getForecast(URL) {
     let latLong = document.querySelector('#location');
     latLong.innerHTML = sessStore.getItem('locale');
     let elevation = document.querySelector('#elevation');
-    elevation.innerHTML = "Elevation: " + (session.getItem('stationElevation') * 3.28) + "ft";
+    elevation.innerHTML = "Elevation: " + Math.round(((session.getItem('stationElevation') * 3.28) * 100) / 100) + "ft";
     // The latitude and longitude should match what was stored in session storage
 
     // Get the condition keyword and set Background picture
