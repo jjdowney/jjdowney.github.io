@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function(){
     // changeSummaryBackground(outside);
     // Get weather json data
     let weatherURL = "../js/idahoweather.json";
+    let cityName = 'Soda Springs';
     fetchWeatherData(weatherURL);
 })
 

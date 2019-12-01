@@ -5,17 +5,27 @@
     }
     
     #compContainer {
-        grid-template-columns: 1fr 1fr 1fr;
-        padding: 70px 0px;        
+        grid-template-columns: 1fr 1fr;
+        padding: 70px 0px;  
+        max-width: 100%;
+
     }
+
+    p {
+        margin: 0px;
+    }
+
     #wrapper {
-        width: 1000px;
+        max-width: 100%;
     }
 
     footer {
         font-size: 1.25em;
-        width: 1000px;
-        
+        width: 100%;
+    }
+
+    h1 {
+        text-align: center;
     }
  
     nav ul li a {
@@ -42,11 +52,19 @@
     }
 
     .location {
-        grid-column: span 3;
+        grid-column: span 2;
     }
 
     .current {
-        grid-column: span 3;
+        grid-column: span 2;
+    }
+
+    .conditions {
+        grid-column: span 2;
+    }
+
+    header {
+        width: 100%;
     }
 
     

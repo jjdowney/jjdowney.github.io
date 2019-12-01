@@ -6,6 +6,10 @@ main {
     align-items: center;
 }
 
+#compContainer {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
 h1 {
     font-size: 2.5em;
 }
@@ -25,15 +29,21 @@ nav ul li {
 
 footer {
    font-size: 1.35em;
-   width: 1350px;
-
-}
-
-header {
-    grid-column: span 3;
 }
 
 #wrapper {
-    width: 1350px;
+    width: 100%;
+}
+
+.location {
+    grid-column: span 3;
+}
+
+.current {
+    grid-column: span 3;
+}
+
+.conditions {
+    grid-column: span 1;
 }
 }
