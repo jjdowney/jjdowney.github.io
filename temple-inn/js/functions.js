@@ -1,8 +1,9 @@
 footerDate();
+// Copyright Year
 var year = new Date().getFullYear();
 document.getElementById('copyYear').innerHTML = year;
-document.getElementById('update').innerHTML = document.lastModified;
 
+// Today Date
 function footerDate() {
     var date = new Date(document.lastModified);
     var realDate = date.getDate();
@@ -22,4 +23,10 @@ function footerDate() {
     var fullDate = nameWeek + "," + " " + realDate + " " + nameMonth + " " + year;
 
     document.getElementById("today").innerHTML = fullDate;
+}
+
+// Button Function
+function toggleMenu() {
+    console.log(document.getElementById("primary").classList);
+    document.getElementById("primary").classList.toggle("hide");
 }

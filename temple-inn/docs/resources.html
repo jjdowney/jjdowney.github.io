@@ -17,16 +17,20 @@
 <body>
     <header>
         <img id="logo" src="/temple-inn/images/logo.png" alt="Gold statue as logo for site">
-        <nav>
-            <ul>
-                <li><a href="/temple-inn/docs/index.html">Home</a></li>
-                <li><a href="/temple-inn/docs/temples.html">Temples</a></li>
-                <li><a href="/temple-inn/docs/reservations.html">Reservation</a></li>
-                <li><a href="/temple-inn/docs/services.html">Services</a></li>
-                <li><a href="/temple-inn/docs/contact.html">Contact</a></li>
-            </ul>
-        </nav>
+        <p class="title">Temple Inn & Suites </p>
     </header>
+
+    <nav>
+        <button onclick="toggleMenu()">&#9776;</button>
+        <ul id="primary" class="hide">
+            <li><a href="/temple-inn/docs/index.html">Home</a></li>
+            <li><a href="/temple-inn/docs/temples.html">Temples</a></li>
+            <li><a href="/temple-inn/docs/reservations.html">Reservation</a></li>
+            <li><a href="/temple-inn/docs/services.html">Services</a></li>
+            <li><a href="/temple-inn/docs/contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    
     <main>
        <ul>
            <li><a href="#">Temple list</a></li>
@@ -34,7 +38,7 @@
     </main>
 
     <footer>
-        <p>&copy;<span id="copyYear"></span> Temple Inn & Suites | Jaime Hudson | <a href="/temple-inn/docs/resources.html">Resources</a> | <a href="/temple-inn/docs/contact.html">Contact Us</a> |<br><span id="today"></span></p>   
+        <p>&copy;<span id="copyYear"></span> Temple Inn & Suites | <a href="/temple-inn/docs/resources.html">Resources</a> | <a href="/temple-inn/docs/contact.html">Contact Us</a> <br><span id="today"></span></p>   
     </footer>
 </body>
 </html>

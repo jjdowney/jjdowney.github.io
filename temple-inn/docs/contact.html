@@ -16,30 +16,51 @@
 <body>
     <header>
         <img id="logo" src="/temple-inn/images/logo.png" alt="Gold statue as logo for site">
-        <nav>
-            <ul>
-                <li><a href="/temple-inn/docs/index.html">Home</a></li>
-                <li><a href="/temple-inn/docs/temples.html">Temples</a></li>
-                <li><a href="/temple-inn/docs/reservations.html">Reservation</a></li>
-                <li><a href="/temple-inn/docs/services.html">Services</a></li>
-                <li><a href="/temple-inn/docs/contact.html">Contact</a></li>
-            </ul>
-        </nav>
+        <p class="title">Temple Inn & Suites </p>
     </header>
 
-    <main>
-        <form action="/temple-inn/docs/thank-you.html" method="POST">
-        Full name: <input type="text" name="fullname"><br>
-        Email: <input type="text" name="email"><br>
-        Subject: <input type="text" name="subject"><br>
-        Message: <input type="text" name="message"><br><br>
-        <input type="submit" value="Submit">
-        </form>
+    <nav>
+        <button onclick="toggleMenu()">&#9776;</button>
+        <ul id="primary" class="hide">
+            <li><a href="/temple-inn/docs/index.html">Home</a></li>
+            <li><a href="/temple-inn/docs/temples.html">Temples</a></li>
+            <li><a href="/temple-inn/docs/reservations.html">Reservation</a></li>
+            <li><a href="/temple-inn/docs/services.html">Services</a></li>
+            <li><a href="/temple-inn/docs/contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="wrapper">
+        <p class="title">Contact Us</p>
+        <section id="contact">
+            <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3101.405019701323!2d-77.09772048464716!3d38.98325177955754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7c97b6b3b5b43%3A0x9c8eb1c5547b83eb!2s4800%20Montgomery%20Ln%20%23300%2C%20Bethesda%2C%20MD%2020814!5e0!3m2!1sen!2sus!4v1575670465516!5m2!1sen!2sus" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+        <p id="info">Temple Inn & Suites<br>
+        Corporate Headquarters<br><br>
+        4800 Montgomery Ln #300<br>
+        Bethesda, MD 20814<br><br>
+        240-836-7537<br>
+        contact@templeinnandsuites.com
+        </p>
         
+        <form id="form" action="https://jjdowney.github.io/temple-inn/docs/thank-you.html" target="_blank" method="POST">
+            <fieldset>
+                <legend>Contact</legend>
+                <label>Full Name: </label> <br>
+                <input type="text" id="fullname" name="fullname" size="50" placeholder="John Doe"><br>
+                <label>Email: </label><br>
+                <input type="text" id="email" name="email" size="50" placeholder="templeinnsuites@templeinn.com"><br>
+                <label>Subject: </label><br>
+                <input type="text" id="subject" name="subject" size="50" placeholder="Subject"><br>
+                <label>Message: </label><br>
+                <textarea id="message" name="message" cols="49" placeholder="Write Something..."></textarea> <br><br>
+                <input type="submit" value="Send">
+            </fieldset>
+        </form>
+        </section>  
     </main>
 
     <footer>
-        <p>&copy;<span id="copyYear"></span> Temple Inn & Suites | Jaime Hudson | <a href="/temple-inn/docs/resources.html">Resources</a> | <a href="/temple-inn/docs/contact.html">Contact Us</a> |<br><span id="today"></span></p>
+        <p>&copy;<span id="copyYear"></span> Temple Inn & Suites | <a href="/temple-inn/docs/resources.html">Resources</a> | <a href="/temple-inn/docs/contact.html">Contact Us</a> <br><span id="today"></span></p>
     </footer>
 </body>
 </html>
