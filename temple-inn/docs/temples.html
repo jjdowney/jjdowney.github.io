@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewpoint" content="width=device-width, initial-scale=1">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Temple Inn and suites Webpage for Jaime Hudson in CIT 230: Web Frontend Development">
     <meta name="author" content="Jaime Hudson">
     <script src= "/temple-inn/js/functions.js" async></script>
-    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="/temple-inn/css/normalize.css">
     <link rel="stylesheet" href="/temple-inn/css/small.css" media= "screen">
     <link rel="stylesheet" href="/temple-inn/css/large.css" media= "screen and (min-width:45rem)">
     <link rel='icon' href="/temple-inn/images/icon.png" type='image/x-icon'/>
@@ -23,7 +23,7 @@
     <nav>
         <button onclick="toggleMenu()">&#9776;</button>
         <ul id="primary" class="hide">
-            <li><a href="/temple-inn/docs/index.html">Home</a></li>
+            <li><a href="/temple-inn/index.html">Home</a></li>
             <li><a href="/temple-inn/docs/temples.html">Temples</a></li>
             <li><a href="/temple-inn/docs/reservations.html">Reservation</a></li>
             <li><a href="/temple-inn/docs/services.html">Services</a></li>
@@ -32,20 +32,26 @@
     </nav>
 
     <main>
+        <section class="title">
+            Temples
+        </section>
         <section id="diego">
+            <img class="temples" src="/temple-inn/images/san-diegosmall.jpg" alt="Castle looking white building"><br>
             San Diego Temple
         </section>
 
         <section id="paris">
+            <img class="temples" src="/temple-inn/images/parissmall.jpg" alt="Boxey building at night"><br>
             Paris France Temple
         </section>
 
         <section id="boston">
-            <img class="temples" src="/temple-inn/images/boston.jpg" alt="Temple with tall steeple">
+            <img class="temples" src="/temple-inn/images/bostonsmall.jpg" alt="Temple with tall steeple"><br>
             Boston Massachusetts Temple
         </section>
 
         <section id="manaus">
+            <img class="temples" src="/temple-inn/images/manaussmall.jpg" alt="Small temple in palmy weather"><br>
             Manaus Brazil Temple
         </section>
 
