@@ -2,28 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewpoint" content="width=device-width, initial-scale=1">
+    <title>Reservation | Temple Inn and Suites</title>
     <meta name="description" content="Temple Inn and suites Webpage for Jaime Hudson in CIT 230: Web Frontend Development">
-    <meta name="author" content="Jaime Hudson">
-    <script src= "/temple-inn/js/functions.js" async></script>
+    <meta name="author" content="Jaime Hudson">  
+    <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="/temple-inn/css/normalize.css">
     <link rel="stylesheet" href="/temple-inn/css/small.css" media= "screen">
     <link rel="stylesheet" href="/temple-inn/css/large.css" media= "screen and (min-width:45rem)">
     <link rel='icon' href="/temple-inn/images/icon.png" type='image/x-icon'/>
-
-    <title>Reservation | jjdowney.github.io</title>
 </head>
 
 <body>
     <header>
         <img id="logo" src="/temple-inn/images/logo.png" alt="Gold statue as logo for site">
-        <p class="title">Temple Inn & Suites </p>
     </header>
 
     <nav>
         <button onclick="toggleMenu()">&#9776;</button>
         <ul id="primary" class="hide">
-            <li><a href="/temple-inn/docs/index.html">Home</a></li>
+            <li><a href="/temple-inn/index.html">Home</a></li>
             <li><a href="/temple-inn/docs/temples.html">Temples</a></li>
             <li><a href="/temple-inn/docs/reservations.html">Reservation</a></li>
             <li><a href="/temple-inn/docs/services.html">Services</a></li>
@@ -32,18 +29,53 @@
     </nav>
 
     <main>
-        <section>
-            The form will go here
-        </section>
+        <section id="primary">
+        <section class="title">Make A Reservation</section>
+        <p>Fill out the form below to make a reservation at one of our locations.</p>
 
         <section>
-            It will show the summary here
+            <form id="reservation">
+                <label for="name">* Full Name:</label><br>
+                <input id="name" type="text" placeholder="John Doe" size="30"><br>
+                <label for="guests">* # of Guests:</label><br>
+                <input id="guests" type="number" min="1" max="5" size="30"><br>
+                <label for="start">* Reservation Start Date:</label><br>
+                <input id="start" type="date" size="30"><br>
+                <label for="end">* Reservation End Date:</label><br>
+                <input id="end" type="date" size="30"><br>
+                <label for="temple">* Temple Location:</label><br>
+                <input id="temple" list="temple" name="temples" placeholder="(Choose Location)" size="30"><br>
+                <datalist id="temple">
+                    <option value="San Diego, California">
+                    <option value="Paris, France">
+                    <option value="Boston, Massachusetts">
+                    <option value="Manaus, Brazil">
+                </datalist>
+                <label for="email">* Email:</label><br>
+                <input id="email" type="email" placeholder="templeinn@templeinn.com" size="30"><br>
+                <label for="number">Phone Number:</label><br>
+                <input id="number" type="tel" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" size="30"><br>
+                <small>(Format: 123-456-7890)</small><br><br>
+                <label for="message">Special Requests:</label><br>
+                <textarea id="message" name="message"  placeholder="Write Something..." cols="30"></textarea><br>
+                <button id="submit">Submit</button>
+            </form>
         </section>
+    </section>
+
+        <section id="resResult" class="hide">
+            <p class="title">Reservation Details</p>
+            <pre></pre>
+
+        </section>
+
     </main>
 
     <footer>
         <p>&copy;<span id="copyYear"></span> Temple Inn & Suites | <a href="/temple-inn/docs/resources.html">Resources</a> | <a href="/temple-inn/docs/contact.html">Contact Us</a> <br><span id="today"></span></p>
     </footer>
+    <script src= "/temple-inn/js/reservation.js" async></script>
+
 </body>
 </html>
 

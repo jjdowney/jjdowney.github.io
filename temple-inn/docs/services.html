@@ -2,28 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewpoint" content="width=device-width, initial-scale=1">
+    <title>Services | Temple Inn and Suites</title>
     <meta name="description" content="Temple Inn and suites Webpage for Jaime Hudson in CIT 230: Web Frontend Development">
-    <meta name="author" content="Jaime Hudson">
-    <script src= "/temple-inn/js/functions.js" async></script>
+    <meta name="author" content="Jaime Hudson">  
+    <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="/temple-inn/css/normalize.css">
     <link rel="stylesheet" href="/temple-inn/css/small.css" media= "screen">
     <link rel="stylesheet" href="/temple-inn/css/large.css" media= "screen and (min-width:45rem)">
     <link rel='icon' href="/temple-inn/images/icon.png" type='image/x-icon'/>
-
-    <title>Services | jjdowney.github.io</title>
 </head>
 
 <body>
     <header>
         <img id="logo" src="/temple-inn/images/logo.png" alt="Gold statue as logo for site">
-        <p class="title">Temple Inn & Suites </p>
     </header>
 
     <nav>
         <button onclick="toggleMenu()">&#9776;</button>
         <ul id="primary" class="hide">
-            <li><a href="/temple-inn/docs/index.html">Home</a></li>
+            <li><a href="/temple-inn/index.html">Home</a></li>
             <li><a href="/temple-inn/docs/temples.html">Temples</a></li>
             <li><a href="/temple-inn/docs/reservations.html">Reservation</a></li>
             <li><a href="/temple-inn/docs/services.html">Services</a></li>
@@ -31,26 +28,81 @@
         </ul>
     </nav>
 
-    <main>
-        <section class="title">
-            Specialized Services
-        </section>
+    <main id="quad">
         <section>
-            The list of services here
-        </section>
+        <p class="title"> Specialized Services </p>
+            <p>We pride ourselves on our ability to accomodate to the needs of our guests. Our specialized services include:</p>
+            <ul class="services">
+                <li>Free access to changing rooms and bathroom facilities for temple patrons who have traveled far and need to change to and from church clothes</li><br>
+                <li>A playroom and low-cost, short-term babysitting services for the children of patrons</li><br>
+                <li>Long-term stay accommodations in kitchenette suites for full-time temple missionaries</li><br>
+                <li>Church history themed reception and sitting area</li><br>
+                <li>A family search center that supports family search and ordinance work</li><br>
+            </ul>
+        </p>
+    </section>
 
         <section>
-            The event part goes here
+            <p class="title">Free Amenities</p>
+            <p>Your comfort and happiness are our goal. As our gift to our guests, we ensure all are taken care of and provided for. Our free of charge amenities include the following: </p>
+            <ul class="services">
+                <li>Breakfast</li><br>
+                <li>Exercise/workout room</li><br>
+                <li>Indoor pool</li><br>
+                <li>WiFi high-speed internet access and smart TVs</li><br>
+                <li>Parking</li><br>
+                <li>Temple shuttle</li><br>
+                <li>Family history consultation and family ordinance card service</li><br>
+            </ul>
         </section>
-
         <section>
-            The Full time missionary part goes here
+            <p class="title">Receptions</p>
+            <img class="temples" src="/temple-inn/images/receptionsmall.jpg" alt="decorated reception room">
+            <p>Hosting an event or wedding? We have a selection of options for reception halls depending on the location chosen. Our wedding reception halls can be easily customized with decorations and a simple catering menu plus kitchen access for food preparation and serving. Tables and chairs are provided. Contact us for more information.</p>
+        </section>
+        <section>
+            <p class="title">Full-Time Missionary Suites</p>
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <img class="temples" src="/temple-inn/images/suitesmall.jpg" alt="hotel suite room" style="width:100%">
+                </div>
+
+                <div class="mySlides fade">
+                    <img class="temples" src="/temple-inn/images/suite2small.jpg" alt="hotel suite room" style="width:100%">
+                </div>
+
+                <div class="mySlides fade">
+                    <img class="temples" src="/temple-inn/images/suite3small.jpg" alt="hotel suite room" style="width:100%">
+                </div>
+
+                <div class="mySlides fade">
+                    <img class="temples" src="/temple-inn/images/suite4small.jpg" alt="hotel suite room" style="width:100%">
+                </div>
+
+                 <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+
+            <!-- The dots/circles -->
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+
+            </div>
+            
+            <p>For full-time missionaries looking for a long-term stay, we have a selection of suites suitable for your needs. Each room has a homey touch with everything you may need to feel at home. Details vary for each location. Contact us for more information.</p>
         </section>
     </main>
 
     <footer>
         <p>&copy;<span id="copyYear"></span> Temple Inn & Suites | <a href="/temple-inn/docs/resources.html">Resources</a> | <a href="/temple-inn/docs/contact.html">Contact Us</a> <br><span id="today"></span></p>
     </footer>
+    <script src= "/temple-inn/js/slideshow.js" async></script>
+
 </body>
 </html>
 
