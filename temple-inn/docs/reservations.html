@@ -29,35 +29,35 @@
     </nav>
 
     <main>
-        <section id="primary">
+        <section id="form">
         <section class="title">Make A Reservation</section>
         <p>Fill out the form below to make a reservation at one of our locations.</p>
 
         <section>
             <form id="reservation">
                 <label for="name">* Full Name:</label><br>
-                <input id="name" type="text" placeholder="John Doe" size="30"><br>
+                <input id="name" type="text" placeholder="John Doe" size="30" required><br>
                 <label for="guests">* # of Guests:</label><br>
-                <input id="guests" type="number" min="1" max="5" size="30"><br>
+                <input id="guests" type="number" min="1" max="5" size="30" required><br>
                 <label for="start">* Reservation Start Date:</label><br>
-                <input id="start" type="date" size="30"><br>
+                <input id="start" type="date" size="30" required><br>
                 <label for="end">* Reservation End Date:</label><br>
-                <input id="end" type="date" size="30"><br>
+                <input id="end" type="date" size="30" required><br>
                 <label for="temple">* Temple Location:</label><br>
-                <input id="temple" list="temple" name="temples" placeholder="(Choose Location)" size="30"><br>
-                <datalist id="temple">
-                    <option value="San Diego, California">
-                    <option value="Paris, France">
-                    <option value="Boston, Massachusetts">
-                    <option value="Manaus, Brazil">
-                </datalist>
+                <select id="temple" list="temple" name="temples" required>
+                    <option label="(Choose Location)"></option>
+                    <option value="San Diego, California">San Diego, California</option>
+                    <option value="Paris, France">Paris, France</option>
+                    <option value="Boston, Massachusetts">Boston, Massachusetts</option>
+                    <option value="Manaus, Brazil">Manaus, Brazil</option>
+                </select>
                 <label for="email">* Email:</label><br>
-                <input id="email" type="email" placeholder="templeinn@templeinn.com" size="30"><br>
+                <input id="email" type="email" placeholder="templeinn@templeinn.com" size="30" required><br>
                 <label for="number">Phone Number:</label><br>
                 <input id="number" type="tel" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" size="30"><br>
                 <small>(Format: 123-456-7890)</small><br><br>
                 <label for="message">Special Requests:</label><br>
-                <textarea id="message" name="message"  placeholder="Write Something..." cols="30"></textarea><br>
+                <textarea id="message" name="message"  placeholder="Write Something..." cols=100% ></textarea><br>
                 <button id="submit">Submit</button>
             </form>
         </section>
@@ -65,7 +65,17 @@
 
         <section id="resResult" class="hide">
             <p class="title">Reservation Details</p>
-            <pre></pre>
+            <p>Your reservation has been placed. Please review to ensure all information is correct. To cancel or change any of the reservation information, please contact us immediately.</p>
+            <div class="confirmation">
+                <p id="custName"></p>
+                <p id="custGuests"> </p>
+                <p id="custStart"> </p>
+                <p id="custEnd"> </p>
+                <p id="custTemple"> </p>
+                <p id="custEmail"></p>
+                <p id="custNumber"> </p>
+                <p id="custMessage"> </p>
+            </div>
 
         </section>
 

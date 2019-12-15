@@ -15,15 +15,35 @@ main {
 
 #manaus {
     background-color: #FFD6bA;
+    border-radius: 10px;
 }
 
-#name, #guests, #start, #end, #temple, #number, #email, #special {
-    size: 100px;
+#name, #guests, #start, #end, #temple, #number, #email, #special, #fullname, #subject, #message {
+    width: 100%;
 }
 
 #quad {
     display: grid;
     grid-template-columns: 1fr 1fr;
+}
+
+#two, #four{
+    grid-column: span 2;
+}
+
+#align {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#info {
+    margin-top: 0px;
+}
+
+#map {
+    margin-top: 30px;
+    width: 450px;
+    height: 300px;
 }
 
 nav ul {

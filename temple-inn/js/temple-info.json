@@ -1,66 +1,56 @@
 {
-    "San Diego": {
-      "sessions": {
-        "type": "point",
-        "coordinates": {
-          "0": -111.8766,
-          "1": 42.0963
-        }
-      },
-      "contact": {
-        "forecast": "https://api.weather.gov/gridpoints/PIH/112,9/forecast",
-        "forecastHourly": "https://api.weather.gov/gridpoints/PIH/112,9/forecast/hourly",
-        "observationStations": "https://api.weather.gov/gridpoints/PIH/112,9/stations",
-        "relativeLocation": {
-          "geometry": {
-            "type": "point",
-            "coordinates": {
-              "0": -111.8766,
-              "1": 42.0963
-            }
-          },
-          "sessions": {
-            "city": "Preston",
-            "state": "Idaho",
-            "temperature": 39,
-            "windSpeed": 5.1,
-            "windGust": 6.3,
-            "highTemp": 50,
-            "lowTemp": 26
-          }
-        }
+    "sanDiego": {
+      "closures": {
+          "0": "Tuesday, 24 December 2019 - Wednesday, 25 December 2019",
+          "1": "Tuesday, 31 December 2019",
+          "2": "Wednesday, 1 January 2020",
+          "3": "Monday, 16 March 2020 - Monday, 30 March 2020",
+          "4": "Saturday, 4 April 2020",
+          "5": "Saturday, 4 July 2020",
+          "6": "Monday, 14 September 2020 - Monday, 28 September 2020",
+          "7": "Saturday, 3 October 2020",
+          "8": "Wednesday, 25 November 2020 - Thursday, 26 November 2020",
+          "9": "Thursday, 24 December 2020 - Friday, 25 December 2020",
+          "10": "Thursday, 31 December 2020"
       }
     },
     "paris": {
-    "geometry": {
-      "type": "point",
-      "coordinates": {
-        "0": -111.6047,
-        "1": 42.6544
+      "closures": {
+          "0": "Tuesday, 24 December 2019 - Thursday, 26 December 2019",
+          "1": "Tuesday, 31 December 2019 - Thursday, 2 January 2020",
+          "2": "Monday, 13 January 2020 - Monday, 27 January 2020",
+          "3": "Saturday, 4 April 2020",
+          "4": "Monday, 8 June 2020 - Monday, 22 June 2020",
+          "5": "Saturday, 3 October 2020",
+          "6": "Thursday, 24 December 2020 - Thursday, 26 December 2020",
+          "7": "Thursday, 31 December 2020 - Saturday, 2 January 2021"
       }
     },
-    "properties": {
-      "forecast": "https://api.weather.gov/gridpoints/PIH/125,33/forecast",
-      "forecastHourly": "https://api.weather.gov/gridpoints/PIH/125,33/forecast/hourly",
-      "observationStations": "https://api.weather.gov/gridpoints/PIH/125,33/stations",
-      "relativeLocation": {
-        "geometry": {
-          "type": "point",
-          "coordinates": {
-            "0": -111.6047,
-            "1": 42.6544
-          }
-        },
-        "properties": {
-          "city": "Soda Springs",
-          "state": "Idaho",
-          "temperature": 38,
-          "windSpeed": 5,
-          "windGust": 7,
-          "highTemp": 44,
-          "lowTemp": 20
-        }
+    "boston": {
+      "closures": {
+          "0": "Tuesday, 24 December 2019 - Wednesday, 25 December 2019",
+          "1": "Tuesday, 31 December 2019",
+          "2": "Wednesday, 1 January 2020",
+          "3": "Monday, 16 January 2020 - Monday, 20 March 2020",
+          "4": "Saturday, 4 April 2020",
+          "5": "Saturday, 4 July 2020",
+          "6": "Monday, 14 September 2020 - Monday, 28 September 2020",
+          "7": "Saturday, 3 October 2020",
+          "8": "Wednesday, 25 November 2020 - Thursday, 26 November 2020",
+          "9": "Thursday, 24 December 2020 - Friday, 25 December 2020",
+          "10": "Thursday, 31 December 2020"
+      }
+    },
+    "manaus": {
+      "closures": {
+          "0": "Tuesday, 24 December 2019 - Wednesday, 25 December 2019",
+          "1": "Tuesday, 31 December 2019 - Wednesday, 1 January 2020",
+          "2": "Saturday, 4 April 2020",
+          "3": "Monday, 4 May 2020 - Monday, 18 May 2020",
+          "4": "Saturday, 3 October 2020",
+          "5": "Monday, 26 October 2020 - Monday, 9 November 2020",
+          "6": "Thursday, 24 December 2020 - Friday, 25 December 2020",
+          "7": "Thursday, 31 December 2020 - Friday, 1 January 2021"
       }
     }
-  }
 }
