@@ -32,6 +32,7 @@ function toggleMenu() {
 }
 
 
+
 document.addEventListener("DOMContentLoaded", ()=>{
   document.querySelector('#submit').addEventListener("click", processData);
 })
@@ -42,13 +43,13 @@ let processData = (event) => {
   event.preventDefault();
   let reservation = {
     name: document.querySelector('#name').value,
-      guests: document.querySelector('#guests').value,
-      startDate: document.querySelector('#start').value,
-      endDate: document.querySelector('#end').value,
-      temple: document.querySelector('#temple').value,
-      email: document.querySelector('#email').value,
-      number: document.querySelector('#number').value,
-      message: document.querySelector('#message').value
+    guests: document.querySelector('#guests').value,
+    startDate: document.querySelector('#start').value,
+    endDate: document.querySelector('#end').value,
+    temple: document.querySelector('#temple').value,
+    email: document.querySelector('#email').value,
+    number: document.querySelector('#number').value,
+    message: document.querySelector('#message').value
   }
 // adds reservation to the end of the array of all reservations
 reservations.push(reservation);
@@ -56,7 +57,6 @@ reservations.push(reservation);
 document.forms[0].reset;
 // see results in console
 console.log('newRes', {reservations});
-
 
   // Store to session Storage
   window.sessionStorage.setItem("reservations", JSON.stringify(reservations));
@@ -66,24 +66,40 @@ console.log('newRes', {reservations});
   
   // inject to the page
   let name = 'Full Name: ' + resList[0].name + '<br>';
+  window.sessionStorage.setItem('name', name);
+  let custName = document.querySelector('#custName');
+  custName.innerHTML = window.sessionStorage.getItem('name');
   let guests = 'Number of Guests: ' + resList[0].guests + '<br>'
+  window.sessionStorage.setItem('guests', guests);
+  let custGuests = document.querySelector('#custGuests');
+  custGuests.innerHTML = window.sessionStorage.getItem('guests');
   let start = 'Reservation Start Date: ' + resList[0].startDate + '<br>';
+  window.sessionStorage.setItem('start', start);
+  let custStart = document.querySelector('#custStart');
+  custStart.innerHTML = window.sessionStorage.getItem('start');
   let end = 'Reservation End Date: ' + resList[0].endDate + '<br>';
+  window.sessionStorage.setItem('end', end);
+  let custEnd = document.querySelector('#custEnd');
+  custEnd.innerHTML = window.sessionStorage.getItem('end');
   let temple = 'Temple Location: ' + resList[0].temple + '<br>';
+  window.sessionStorage.setItem('temple', temple);
+  let custTemple = document.querySelector('#custTemple');
+  custTemple.innerHTML = window.sessionStorage.getItem('temple');
   let email = 'Email: ' + resList[0].email + '<br>';
+  window.sessionStorage.setItem('email', email);
+  let custEmail = document.querySelector('#custEmail');
+  custEmail.innerHTML = window.sessionStorage.getItem('email');
   let phone = 'Phone Number: ' + resList[0].number + '<br>';
+  window.sessionStorage.setItem('phone', phone);
+  let custNumber = document.querySelector('#custNumber');
+  custNumber.innerHTML = window.sessionStorage.getItem('phone');
   let message = 'Special Requests: ' + resList[0].message + '<br>';
+  window.sessionStorage.setItem('message', message);
+  let custMessage = document.querySelector('#custMessage');
+  custMessage.innerHTML = window.sessionStorage.getItem('message');
   
-  let summary = name + guests + start + end + temple + email + phone + message;
-
-  const resDetails = document.querySelector("#resResult div");
-  resDetails.innerHTML = summary;
-  // "\n" + JSON.stringify(reservations, "\t", 2);
   
 // display the results
-  document.querySelector("#form").classList.add("hide");
+  document.querySelector("#input").classList.add("hide");
   document.querySelector("#resResult").classList.remove("hide");
-
-
 }
-

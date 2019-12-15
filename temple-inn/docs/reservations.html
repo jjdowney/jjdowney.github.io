@@ -31,15 +31,15 @@
     </nav>
 
     <main>
-        <section id="form">
+    <section id="input">
         <p class="title">Make A Reservation</p>
         <p>Please fill out the form to make a reservation at one of our locations.</p>
         
-        <section>
+        <div>
             <img class="temples" src="/temple-inn/images/reservation.jpg" alt="hotel desk">
-        </section>
+        </div>
 
-        <section>
+        <div>
             <form id="reservation">
                 <label for="name">* Full Name:</label><br>
                 <input id="name" type="text" placeholder="John Doe" required><br>
@@ -66,13 +66,13 @@
                 <textarea id="message" name="message"  placeholder="Write Something..." ></textarea><br>
                 <button id="submit">Submit</button>
             </form>
-        </section>
+        </div>
     </section>
 
-        <section id="resResult" class="hide">
+    <section id="resResult" class="hide">
             <p class="title">Reservation Details</p>
             <p>Your reservation has been placed. Please review to ensure all information is correct. To cancel or change any of the reservation information, please contact us immediately.</p>
-            <div class="confirmation">
+            <!-- <div class="confirmation"> -->
                 <p id="custName"></p>
                 <p id="custGuests"> </p>
                 <p id="custStart"> </p>
@@ -81,9 +81,9 @@
                 <p id="custEmail"></p>
                 <p id="custNumber"> </p>
                 <p id="custMessage"> </p>
-            </div>
+            <!-- </div> -->
 
-        </section>
+    </section>
 
     </main>
 
