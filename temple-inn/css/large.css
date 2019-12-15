@@ -4,6 +4,15 @@ main {
     margin: 0px 80px 0px 80px;
 }
 
+#reserve {
+    margin: 10px 75px 10px 75px;
+}
+
+#large {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
 #second {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -44,6 +53,20 @@ main {
     margin-top: 30px;
     width: 450px;
     height: 300px;
+}
+
+#thank {
+    font-size: 20px;
+}
+
+
+
+main ul li a {
+    font-size: 25px;
+}
+
+.title {
+    font-size: 40px;
 }
 
 nav ul {
