@@ -220,11 +220,11 @@ main ul li a{
     max-width: 100%;
 }
 
-#n, #e, #s, #m {
+#fullname, #email, #subject, #message {
     margin: 10px 0px 10px 0px;
     padding: 5px;
     font-family: "Quicksand", sans-serif;
-    width: 100%;
+    max-width: 100%;
 
 }
 
