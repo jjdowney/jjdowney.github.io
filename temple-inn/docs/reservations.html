@@ -35,7 +35,6 @@
         <p class="title">Make A Reservation</p>
         <p>Please fill out the form to make a reservation at one of our locations.</p>
         
-        <section id='large'>
         <section>
             <img class="temples" src="/temple-inn/images/reservation.jpg" alt="hotel desk">
         </section>
@@ -51,7 +50,7 @@
                 <label for="end">* Reservation End Date:</label><br>
                 <input id="end" type="date" required><br>
                 <label for="temple">* Temple Location:</label><br>
-                <select id="temple" list="temple" name="temples" required>
+                <select id="temple" name="temples" required>
                     <option label="(Choose Location)"></option>
                     <option value="San Diego, California">San Diego, California</option>
                     <option value="Paris, France">Paris, France</option>
@@ -64,11 +63,10 @@
                 <input id="number" type="tel" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" ><br>
                 <small>(Format: 123-456-7890)</small><br><br>
                 <label for="message">Special Requests:</label><br>
-                <textarea id="message" name="message"  placeholder="Write Something..." cols=100% ></textarea><br>
+                <textarea id="message" name="message"  placeholder="Write Something..." ></textarea><br>
                 <button id="submit">Submit</button>
             </form>
         </section>
-    </section>
     </section>
 
         <section id="resResult" class="hide">

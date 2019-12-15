@@ -8,10 +8,10 @@ main {
     margin: 10px 75px 10px 75px;
 }
 
-#large {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+#reservation {
+    margin: 10px 80px 10px 80px;
 }
+
 
 #second {
     display: grid;
