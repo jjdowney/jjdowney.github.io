@@ -89,6 +89,7 @@ console.log('newRes', {reservations});
   window.sessionStorage.setItem('message', message);
   
   displayResults();
+}
   
 // display the results
 function displayResults(){
@@ -119,5 +120,4 @@ function displayResults(){
   let custMessage = document.querySelector('#custMessage');
   custMessage.innerHTML = window.sessionStorage.getItem('message');
 
-}
 }
